@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MagicHelp — Site Editor</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="wrap">
+    <h1>MagicHelp — Site Editor</h1>
+    <a href="index.html">&larr; Back to site</a>
+  </div>
+</header>
+
+<main class="wrap" style="padding-bottom:80px;">
+
+  <div class="admin-note">
+    <strong>How this works:</strong> this page loaded the site's current Success Stories, Blogs,
+    and Helped List straight from their data files. Add, edit, or remove entries below, then hit
+    <strong>Download updated file</strong> for whichever list you changed. Your browser will save a
+    file such as <code>stories-data.js</code> — move that file into your site folder, overwriting
+    the old one, and refresh <code>index.html</code> to see it live. Nothing here is saved
+    automatically until you download and replace the file.
+  </div>
+
+  <nav class="admin-tabs">
+    <button class="admin-tab-btn active" data-admin-tab="stories" type="button">Success Stories</button>
+    <button class="admin-tab-btn" data-admin-tab="blogs" type="button">Blogs</button>
+    <button class="admin-tab-btn" data-admin-tab="helped" type="button">Helped List</button>
+  </nav>
+
+  <!-- ===================== SUCCESS STORIES ===================== -->
+  <section class="admin-panel active" id="admin-panel-stories">
+    <div class="admin-toolbar">
+      <span></span>
+      <div style="display:flex; gap:10px;">
+        <button class="admin-btn admin-btn--primary" id="storiesAddBtn" type="button">+ Add story</button>
+        <button class="admin-btn admin-btn--gold" id="storiesDownloadBtn" type="button">Download stories-data.js</button>
+      </div>
+    </div>
+    <div class="admin-list" id="storiesList"></div>
+  </section>
+
+  <!-- ===================== BLOGS ===================== -->
+  <section class="admin-panel" id="admin-panel-blogs">
+    <div class="admin-toolbar">
+      <span></span>
+      <div style="display:flex; gap:10px;">
+        <button class="admin-btn admin-btn--primary" id="blogsAddBtn" type="button">+ Add post</button>
+        <button class="admin-btn admin-btn--gold" id="blogsDownloadBtn" type="button">Download blogs-data.js</button>
+      </div>
+    </div>
+    <div class="admin-list" id="blogsList"></div>
+  </section>
+
+  <!-- ===================== HELPED LIST ===================== -->
+  <section class="admin-panel" id="admin-panel-helped">
+    <div class="admin-toolbar">
+      <span></span>
+      <div style="display:flex; gap:10px;">
+        <button class="admin-btn admin-btn--primary" id="helpedAddBtn" type="button">+ Add person</button>
+        <button class="admin-btn admin-btn--gold" id="helpedDownloadBtn" type="button">Download helped-data.js</button>
+      </div>
+    </div>
+    <div class="admin-list" id="helpedList"></div>
+  </section>
+
+</main>
+
+<div class="admin-toast" id="adminToast"></div>
+
+<script src="stories-data.js"></script>
+<script src="blogs-data.js"></script>
+<script src="helped-data.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

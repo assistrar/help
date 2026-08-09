@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b3a6b"/>
+      <stop offset="100%" stop-color="#0d1b38"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#g)"/>
+  <circle cx="320" cy="180" r="70" fill="rgba(255,255,255,0.18)"/>
+  <text x="320" y="200" font-family="Baloo 2, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff" text-anchor="middle">01</text>
+  <text x="320" y="330" font-family="Inter, Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.85)" text-anchor="middle">Replace this placeholder image</text>
+</svg>
